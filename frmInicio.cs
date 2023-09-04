@@ -16,5 +16,15 @@ namespace pryLedoEI
         {
             InitializeComponent();
         }
+
+        private void frmInicio_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

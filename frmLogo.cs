@@ -25,11 +25,20 @@ namespace pryLedoEI
             if (progressBar1.Value == progressBar1.Maximum)
             {
                 timer1.Stop();
-                this.Hide();
-                frmInicio frmInicio = new frmInicio();
-                frmInicio.Show();
 
+               // this.Hide();
+
+                frmInicio frmInicio = new frmInicio();
+                frmInicio.ShowDialog();
+
+
+                this.Close();
             }
+        }
+
+        private void frmCarga_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
