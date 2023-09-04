@@ -1,6 +1,6 @@
 ﻿namespace pryLedoEI
 {
-    partial class Form1
+    partial class frmCarga
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,12 +29,71 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.LblPorcentaje = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 311);
+            this.progressBar1.Maximum = 101;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(322, 29);
+            this.progressBar1.TabIndex = 0;
+            // 
+            // LblPorcentaje
+            // 
+            this.LblPorcentaje.AutoSize = true;
+            this.LblPorcentaje.Location = new System.Drawing.Point(313, 343);
+            this.LblPorcentaje.Name = "LblPorcentaje";
+            this.LblPorcentaje.Size = new System.Drawing.Size(21, 13);
+            this.LblPorcentaje.TabIndex = 1;
+            this.LblPorcentaje.Text = "0%";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pryLedoEI.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(66, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(223, 293);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // frmCarga
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.Peru;
+            this.ClientSize = new System.Drawing.Size(346, 365);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.LblPorcentaje);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmCarga";
+            this.Text = "Strong Seguros";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label LblPorcentaje;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace pryLedoEI
 {
-    public partial class Form1 : Form
+    public partial class frmCarga : Form
     {
-        public Form1()
+        public frmCarga()
         {
             InitializeComponent();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Increment(5);
+            LblPorcentaje.Text = progressBar1.Value.ToString() + "%";
+
+            if (progressBar1.Value == progressBar1.Maximum)
+            {
+                timer1.Stop();
+                this.Hide();
+                frmInicio frmInicio = new frmInicio();
+                frmInicio.Show();
+
+            }
         }
     }
 }
