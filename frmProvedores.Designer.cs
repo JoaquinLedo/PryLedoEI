@@ -33,7 +33,6 @@
             this.txtExpediente = new System.Windows.Forms.TextBox();
             this.txtJuzgado = new System.Windows.Forms.TextBox();
             this.txtJurisdiccion = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtLiquidador = new System.Windows.Forms.TextBox();
             this.lblLiquidador = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -47,173 +46,148 @@
             this.lblNumero = new System.Windows.Forms.Label();
             this.TxtNumero = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnCargar = new System.Windows.Forms.Button();
             this.BtnBorrar = new System.Windows.Forms.Button();
             this.BtnMostrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnVolver
             // 
+            this.btnVolver.BackColor = System.Drawing.Color.LightCyan;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Location = new System.Drawing.Point(413, 552);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(107, 27);
             this.btnVolver.TabIndex = 0;
             this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // txtExpediente
             // 
-            this.txtExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExpediente.Location = new System.Drawing.Point(162, 263);
+            this.txtExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExpediente.Location = new System.Drawing.Point(260, 92);
             this.txtExpediente.Name = "txtExpediente";
-            this.txtExpediente.Size = new System.Drawing.Size(198, 26);
+            this.txtExpediente.Size = new System.Drawing.Size(198, 31);
             this.txtExpediente.TabIndex = 24;
-            this.txtExpediente.Visible = false;
             // 
             // txtJuzgado
             // 
-            this.txtJuzgado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJuzgado.Location = new System.Drawing.Point(162, 405);
+            this.txtJuzgado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJuzgado.Location = new System.Drawing.Point(260, 332);
             this.txtJuzgado.Name = "txtJuzgado";
-            this.txtJuzgado.Size = new System.Drawing.Size(198, 26);
+            this.txtJuzgado.Size = new System.Drawing.Size(198, 31);
             this.txtJuzgado.TabIndex = 25;
-            this.txtJuzgado.Visible = false;
             // 
             // txtJurisdiccion
             // 
-            this.txtJurisdiccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJurisdiccion.Location = new System.Drawing.Point(162, 448);
+            this.txtJurisdiccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJurisdiccion.Location = new System.Drawing.Point(260, 284);
             this.txtJurisdiccion.Name = "txtJurisdiccion";
-            this.txtJurisdiccion.Size = new System.Drawing.Size(198, 26);
+            this.txtJurisdiccion.Size = new System.Drawing.Size(198, 31);
             this.txtJurisdiccion.TabIndex = 26;
-            this.txtJurisdiccion.Visible = false;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.AllowDrop = true;
-            this.txtDireccion.CausesValidation = false;
-            this.txtDireccion.Enabled = false;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(162, 231);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(198, 26);
-            this.txtDireccion.TabIndex = 28;
-            this.txtDireccion.TabStop = false;
-            this.txtDireccion.Visible = false;
             // 
             // txtLiquidador
             // 
-            this.txtLiquidador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLiquidador.Location = new System.Drawing.Point(162, 502);
+            this.txtLiquidador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLiquidador.Location = new System.Drawing.Point(260, 396);
             this.txtLiquidador.Name = "txtLiquidador";
-            this.txtLiquidador.Size = new System.Drawing.Size(198, 26);
+            this.txtLiquidador.Size = new System.Drawing.Size(198, 31);
             this.txtLiquidador.TabIndex = 29;
-            this.txtLiquidador.Visible = false;
             // 
             // lblLiquidador
             // 
             this.lblLiquidador.AutoSize = true;
-            this.lblLiquidador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLiquidador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLiquidador.ForeColor = System.Drawing.Color.White;
-            this.lblLiquidador.Location = new System.Drawing.Point(16, 488);
+            this.lblLiquidador.Location = new System.Drawing.Point(52, 377);
             this.lblLiquidador.Name = "lblLiquidador";
-            this.lblLiquidador.Size = new System.Drawing.Size(119, 40);
+            this.lblLiquidador.Size = new System.Drawing.Size(156, 50);
             this.lblLiquidador.TabIndex = 37;
             this.lblLiquidador.Text = "Liquidador \r\nResponsable:";
-            this.lblLiquidador.Visible = false;
             // 
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.Color.White;
-            this.lblDireccion.Location = new System.Drawing.Point(46, 451);
+            this.lblDireccion.Location = new System.Drawing.Point(90, 335);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(89, 20);
+            this.lblDireccion.Size = new System.Drawing.Size(118, 25);
             this.lblDireccion.TabIndex = 36;
             this.lblDireccion.Text = "Dirección:";
-            this.lblDireccion.Visible = false;
             // 
             // lblJurisd
             // 
             this.lblJurisd.AutoSize = true;
-            this.lblJurisd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJurisd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJurisd.ForeColor = System.Drawing.Color.White;
-            this.lblJurisd.Location = new System.Drawing.Point(27, 408);
+            this.lblJurisd.Location = new System.Drawing.Point(63, 287);
             this.lblJurisd.Name = "lblJurisd";
-            this.lblJurisd.Size = new System.Drawing.Size(108, 20);
+            this.lblJurisd.Size = new System.Drawing.Size(145, 25);
             this.lblJurisd.TabIndex = 35;
             this.lblJurisd.Text = "Jurisdicción:";
-            this.lblJurisd.Visible = false;
             // 
             // lblJuzgado
             // 
             this.lblJuzgado.AutoSize = true;
-            this.lblJuzgado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJuzgado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJuzgado.ForeColor = System.Drawing.Color.White;
-            this.lblJuzgado.Location = new System.Drawing.Point(53, 369);
+            this.lblJuzgado.Location = new System.Drawing.Point(100, 239);
             this.lblJuzgado.Name = "lblJuzgado";
-            this.lblJuzgado.Size = new System.Drawing.Size(82, 20);
+            this.lblJuzgado.Size = new System.Drawing.Size(108, 25);
             this.lblJuzgado.TabIndex = 34;
             this.lblJuzgado.Text = "Juzgado:";
-            this.lblJuzgado.Visible = false;
             // 
             // lblExpediente
             // 
             this.lblExpediente.AutoSize = true;
-            this.lblExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpediente.ForeColor = System.Drawing.Color.White;
-            this.lblExpediente.Location = new System.Drawing.Point(7, 329);
+            this.lblExpediente.Location = new System.Drawing.Point(39, 191);
             this.lblExpediente.Name = "lblExpediente";
-            this.lblExpediente.Size = new System.Drawing.Size(128, 20);
+            this.lblExpediente.Size = new System.Drawing.Size(169, 25);
             this.lblExpediente.TabIndex = 33;
             this.lblExpediente.Text = "Nº Expediente:";
-            this.lblExpediente.Visible = false;
             // 
             // txtApertura
             // 
-            this.txtApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApertura.Location = new System.Drawing.Point(162, 366);
+            this.txtApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApertura.Location = new System.Drawing.Point(260, 236);
             this.txtApertura.Name = "txtApertura";
-            this.txtApertura.Size = new System.Drawing.Size(198, 26);
+            this.txtApertura.Size = new System.Drawing.Size(198, 31);
             this.txtApertura.TabIndex = 23;
-            this.txtApertura.Visible = false;
             // 
             // lblApertura
             // 
             this.lblApertura.AutoSize = true;
-            this.lblApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApertura.ForeColor = System.Drawing.Color.White;
-            this.lblApertura.Location = new System.Drawing.Point(46, 297);
+            this.lblApertura.Location = new System.Drawing.Point(99, 142);
             this.lblApertura.Name = "lblApertura";
-            this.lblApertura.Size = new System.Drawing.Size(84, 20);
+            this.lblApertura.Size = new System.Drawing.Size(109, 25);
             this.lblApertura.TabIndex = 32;
             this.lblApertura.Text = "Apertura:";
-            this.lblApertura.Visible = false;
             // 
             // lblEntidad
             // 
             this.lblEntidad.AutoSize = true;
-            this.lblEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEntidad.ForeColor = System.Drawing.Color.White;
-            this.lblEntidad.Location = new System.Drawing.Point(54, 265);
+            this.lblEntidad.Location = new System.Drawing.Point(109, 95);
             this.lblEntidad.Name = "lblEntidad";
-            this.lblEntidad.Size = new System.Drawing.Size(76, 20);
+            this.lblEntidad.Size = new System.Drawing.Size(99, 25);
             this.lblEntidad.TabIndex = 31;
             this.lblEntidad.Text = "Entidad:";
-            this.lblEntidad.Visible = false;
             // 
             // txtEntidad
             // 
-            this.txtEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEntidad.Location = new System.Drawing.Point(162, 326);
+            this.txtEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEntidad.Location = new System.Drawing.Point(260, 188);
             this.txtEntidad.Name = "txtEntidad";
-            this.txtEntidad.Size = new System.Drawing.Size(198, 26);
+            this.txtEntidad.Size = new System.Drawing.Size(198, 31);
             this.txtEntidad.TabIndex = 22;
-            this.txtEntidad.Visible = false;
             // 
             // lblNumero
             // 
@@ -229,77 +203,81 @@
             // 
             // TxtNumero
             // 
-            this.TxtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNumero.Location = new System.Drawing.Point(162, 294);
+            this.TxtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNumero.Location = new System.Drawing.Point(260, 139);
             this.TxtNumero.Name = "TxtNumero";
-            this.TxtNumero.Size = new System.Drawing.Size(198, 26);
+            this.TxtNumero.Size = new System.Drawing.Size(198, 31);
             this.TxtNumero.TabIndex = 21;
-            this.TxtNumero.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(98, 234);
+            this.label1.Location = new System.Drawing.Point(164, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 20);
+            this.label1.Size = new System.Drawing.Size(44, 25);
             this.label1.TabIndex = 38;
             this.label1.Text = "N°:";
-            this.label1.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::pryLedoEI.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(175, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 210);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
             // 
             // BtnCargar
             // 
-            this.BtnCargar.Location = new System.Drawing.Point(413, 378);
+            this.BtnCargar.BackColor = System.Drawing.Color.LightCyan;
+            this.BtnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargar.Location = new System.Drawing.Point(206, 473);
             this.BtnCargar.Name = "BtnCargar";
-            this.BtnCargar.Size = new System.Drawing.Size(89, 37);
+            this.BtnCargar.Size = new System.Drawing.Size(113, 37);
             this.BtnCargar.TabIndex = 40;
             this.BtnCargar.Text = "Cargar";
-            this.BtnCargar.UseVisualStyleBackColor = true;
+            this.BtnCargar.UseVisualStyleBackColor = false;
             // 
             // BtnBorrar
             // 
-            this.BtnBorrar.Location = new System.Drawing.Point(413, 451);
+            this.BtnBorrar.BackColor = System.Drawing.Color.LightCyan;
+            this.BtnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBorrar.Location = new System.Drawing.Point(345, 473);
             this.BtnBorrar.Name = "BtnBorrar";
-            this.BtnBorrar.Size = new System.Drawing.Size(89, 35);
+            this.BtnBorrar.Size = new System.Drawing.Size(113, 36);
             this.BtnBorrar.TabIndex = 41;
             this.BtnBorrar.Text = "Borrar";
-            this.BtnBorrar.UseVisualStyleBackColor = true;
+            this.BtnBorrar.UseVisualStyleBackColor = false;
             // 
             // BtnMostrar
             // 
-            this.BtnMostrar.Location = new System.Drawing.Point(413, 312);
+            this.BtnMostrar.BackColor = System.Drawing.Color.LightCyan;
+            this.BtnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMostrar.Location = new System.Drawing.Point(57, 473);
             this.BtnMostrar.Name = "BtnMostrar";
-            this.BtnMostrar.Size = new System.Drawing.Size(89, 37);
+            this.BtnMostrar.Size = new System.Drawing.Size(113, 37);
             this.BtnMostrar.TabIndex = 42;
             this.BtnMostrar.Text = "Mostrar";
-            this.BtnMostrar.UseVisualStyleBackColor = true;
+            this.BtnMostrar.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(260, 49);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(198, 31);
+            this.textBox1.TabIndex = 43;
             // 
             // frmProvedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Peru;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(532, 591);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BtnMostrar);
             this.Controls.Add(this.BtnBorrar);
             this.Controls.Add(this.BtnCargar);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtExpediente);
             this.Controls.Add(this.txtJuzgado);
             this.Controls.Add(this.txtJurisdiccion);
-            this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtLiquidador);
             this.Controls.Add(this.lblLiquidador);
             this.Controls.Add(this.lblDireccion);
@@ -321,19 +299,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Provedores";
             this.Load += new System.EventHandler(this.frmProvedores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox txtExpediente;
         private System.Windows.Forms.TextBox txtJuzgado;
         private System.Windows.Forms.TextBox txtJurisdiccion;
-        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtLiquidador;
         private System.Windows.Forms.Label lblLiquidador;
         private System.Windows.Forms.Label lblDireccion;
@@ -347,9 +321,10 @@
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.TextBox TxtNumero;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnCargar;
         private System.Windows.Forms.Button BtnBorrar;
         private System.Windows.Forms.Button BtnMostrar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace pryLedoEI
 {
     public partial class frmInicioSesion : Form
@@ -23,11 +24,16 @@ namespace pryLedoEI
             if (txtNombreDeUsuario.Text == "usuario" && txtContraseña.Text == "clave")
             {
                 frmInicio frmInicio = new frmInicio();
-                frmInicio.ShowDialog();
-                this.Close();
+                frmInicio.Show();
+                this.Hide();
+            }
+            else
+            {
+                txtNombreDeUsuario.Clear();
+                txtContraseña.Clear();
+                MessageBox.Show("Usuario o Clave incorrecta");
             }
         }
-        
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {
 
