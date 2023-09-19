@@ -26,12 +26,8 @@ namespace pryLedoEI
             {
                 timer1.Stop();
 
-               // this.Hide();
-
-                frmInicio frmInicio = new frmInicio();
-                frmInicio.ShowDialog();
-
-
+                frmInicioSesion frmInicioSesion = new frmInicioSesion();
+                frmInicioSesion.ShowDialog();
                 this.Close();
             }
         }

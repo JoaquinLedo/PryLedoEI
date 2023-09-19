@@ -26,5 +26,24 @@ namespace pryLedoEI
         {
 
         }
+
+        private void pROVEDORESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProvedores frmProvedores = new frmProvedores ();
+            frmProvedores.ShowDialog();
+            this.Hide();
+        }
+
+        private void prestadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }
