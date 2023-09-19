@@ -204,9 +204,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pryLedoEI.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(159, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 38);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 365);
+            this.pictureBox1.Size = new System.Drawing.Size(219, 296);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -295,7 +295,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "STRONG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInicio_FormClosing);
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.menuStrip1.ResumeLayout(false);

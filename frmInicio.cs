@@ -31,7 +31,6 @@ namespace pryLedoEI
         {
             frmProvedores frmProvedores = new frmProvedores ();
             frmProvedores.ShowDialog();
-            this.Hide();
         }
 
         private void prestadoresToolStripMenuItem_Click(object sender, EventArgs e)

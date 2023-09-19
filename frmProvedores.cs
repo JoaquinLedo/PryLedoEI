@@ -19,8 +19,7 @@ namespace pryLedoEI
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            frmInicio frmInicio = new frmInicio();
-            frmInicio.ShowDialog();
+            
             this.Close();
         }
 
