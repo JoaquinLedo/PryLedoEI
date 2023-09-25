@@ -27,5 +27,13 @@ namespace pryLedoEI
         {
 
         }
+
+        private void BtnMostrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmMostrarProvedores frmMostrarProvedores = new frmMostrarProvedores();
+            frmMostrarProvedores.ShowDialog();
+            
+        }
     }
 }

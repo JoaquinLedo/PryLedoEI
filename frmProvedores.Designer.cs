@@ -255,6 +255,7 @@
             this.BtnMostrar.TabIndex = 42;
             this.BtnMostrar.Text = "Mostrar";
             this.BtnMostrar.UseVisualStyleBackColor = false;
+            this.BtnMostrar.Click += new System.EventHandler(this.BtnMostrar_Click);
             // 
             // textBox1
             // 
