@@ -50,8 +50,6 @@
             this.acercadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pROVEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prestadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cortarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +59,8 @@
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vistapreviadeimpresiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -172,9 +172,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pROVEDORESToolStripMenuItem,
-            this.prestadoresToolStripMenuItem,
-            this.empleadosToolStripMenuItem});
+            this.pROVEDORESToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(898, 24);
@@ -183,24 +181,13 @@
             // 
             // pROVEDORESToolStripMenuItem
             // 
+            this.pROVEDORESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarToolStripMenuItem,
+            this.cargarToolStripMenuItem});
             this.pROVEDORESToolStripMenuItem.Name = "pROVEDORESToolStripMenuItem";
             this.pROVEDORESToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.pROVEDORESToolStripMenuItem.Text = "Provedores";
             this.pROVEDORESToolStripMenuItem.Click += new System.EventHandler(this.pROVEDORESToolStripMenuItem_Click);
-            // 
-            // prestadoresToolStripMenuItem
-            // 
-            this.prestadoresToolStripMenuItem.Name = "prestadoresToolStripMenuItem";
-            this.prestadoresToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.prestadoresToolStripMenuItem.Text = "Prestadores";
-            this.prestadoresToolStripMenuItem.Click += new System.EventHandler(this.prestadoresToolStripMenuItem_Click);
-            // 
-            // empleadosToolStripMenuItem
-            // 
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
-            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -283,13 +270,27 @@
             this.vistapreviadeimpresiónToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             this.vistapreviadeimpresiónToolStripMenuItem.Text = "&Vista previa de impresión";
             // 
+            // mostrarToolStripMenuItem
+            // 
+            this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
+            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mostrarToolStripMenuItem.Text = "Mostrar";
+            this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click);
+            // 
+            // cargarToolStripMenuItem
+            // 
+            this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cargarToolStripMenuItem.Text = "Cargar";
+            this.cargarToolStripMenuItem.Click += new System.EventHandler(this.cargarToolStripMenuItem_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(898, 842);
+            this.ClientSize = new System.Drawing.Size(898, 749);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -339,7 +340,7 @@
         private System.Windows.Forms.ToolStripMenuItem acercadeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem pROVEDORESToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem prestadoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cargarToolStripMenuItem;
     }
 }

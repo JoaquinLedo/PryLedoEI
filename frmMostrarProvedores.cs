@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data;
+using System.Windows.Forms;
+using pryLedoEI.Properties;
 
 namespace pryLedoEI
 {
@@ -17,18 +20,20 @@ namespace pryLedoEI
         {
             InitializeComponent();
             PopulateTreeView();
+            modificarProveedor = new frmProvedores();
         }
+        private frmProvedores modificarProveedor;
 
         private void frmMostrarProvedores_Load(object sender, EventArgs e)
         {
-
+            frmProvedores modificarProveedor = new frmProvedores();
         }
 
         private void PopulateTreeView()
         {
             TreeNode rootNode;
 
-            DirectoryInfo info = new DirectoryInfo(@"../..");
+            DirectoryInfo info = new DirectoryInfo(@"../../Resources/Carpetas de Proveedores");
             if (info.Exists)
             {
                 rootNode = new TreeNode(info.Name);
@@ -62,7 +67,7 @@ namespace pryLedoEI
 
             {
                 TreeNode newSelected = e.Node;
-                lvwMostrarProveedores.Items.Clear();
+                lvwMostrarProvedores.Items.Clear();
                 DirectoryInfo nodeDirInfo = (DirectoryInfo)newSelected.Tag;
                 ListViewItem.ListViewSubItem[] subItems;
                 ListViewItem item = null;
@@ -75,7 +80,7 @@ namespace pryLedoEI
              new ListViewItem.ListViewSubItem(item,
                 dir.LastAccessTime.ToShortDateString())};
                     item.SubItems.AddRange(subItems);
-                    lvwMostrarProveedores.Items.Add(item);
+                    lvwMostrarProvedores.Items.Add(item);
                 }
                 foreach (FileInfo file in nodeDirInfo.GetFiles())
                 {
@@ -86,16 +91,85 @@ namespace pryLedoEI
                 file.LastAccessTime.ToShortDateString())};
 
                     item.SubItems.AddRange(subItems);
-                    lvwMostrarProveedores.Items.Add(item);
+                    lvwMostrarProvedores.Items.Add(item);
                 }
 
-                lvwMostrarProveedores.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+                lvwMostrarProvedores.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
+        }
+
+        string leerLinea;
+        string[] separarDatos;
+        private bool grillaCreada = false;
+        
+
+        private void dgvMostrarProveedores_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        public void dgvMostrarProveedores_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        public static int pos;
+        private void dgvMostrarProveedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            pos = 1 + dgvMostrarProveedores.CurrentRow.Index;
+
+            modificarProveedor.lblModificarNumProveedor.Text = dgvMostrarProveedores[0, pos - 1].Value.ToString();
+            modificarProveedor.txtModificarEntidad.Text = dgvMostrarProveedores[1, pos].Value.ToString();
+            modificarProveedor.txtModificarApertura.Text = dgvMostrarProveedores[2, pos].Value.ToString();
+            modificarProveedor.txtModificarExpediente.Text = dgvMostrarProveedores[3, pos].Value.ToString();
+            modificarProveedor.txtModificarJuzgado.Text = dgvMostrarProveedores[4, pos].Value.ToString();
+            modificarProveedor.txtModificarJurisdiccion.Text = dgvMostrarProveedores[5, pos].Value.ToString();
+            modificarProveedor.txtModificarDireccion.Text = dgvMostrarProveedores[6, pos].Value.ToString();
+            modificarProveedor.txtModificarLiquidador.Text = dgvMostrarProveedores[7, pos].Value.ToString();
+
+            this.Hide();
+            modificarProveedor.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lvwMostrarProveedores_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (!grillaCreada)
+            {
+               
+                StreamReader sr = new StreamReader("../../Resources/Carpetas de Proveedores/Datos Proveedores/ListadoAseguradores.csv");
+
+                string leerLinea;
+                string[] separarDatos;
+
+                leerLinea = sr.ReadLine();
+                separarDatos = leerLinea.Split(';');
+
+                for (int indice = 0; indice < separarDatos.Length; indice++)
+                {
+                    dgvMostrarProveedores.Columns.Add(separarDatos[indice], separarDatos[indice]);
+                }
+
+                while (sr.EndOfStream == false)
+                {
+                    leerLinea = sr.ReadLine();
+                    separarDatos = leerLinea.Split(';');
+                    dgvMostrarProveedores.Rows.Add(separarDatos);
+                }
+
+                sr.Close();
+
+                grillaCreada = true;
+            }
+            else
+            {
+
+            }
+
+
         }
     }
 }

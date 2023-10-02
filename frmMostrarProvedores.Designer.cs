@@ -30,10 +30,7 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tvwMostrarProveedores = new System.Windows.Forms.TreeView();
-            this.lvwMostrarProveedores = new System.Windows.Forms.ListView();
-            this.clmhName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmhTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmhUlt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.dgvMostrarProveedores = new System.Windows.Forms.DataGridView();
             this.ColumnNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEntidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +40,10 @@
             this.ColumnJurisdiccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDirección = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLiqRes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lvwMostrarProvedores = new System.Windows.Forms.ListView();
+            this.clmhName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmhTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmhUlt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,7 +65,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.dgvMostrarProveedores);
-            this.splitContainer1.Panel2.Controls.Add(this.lvwMostrarProveedores);
+            this.splitContainer1.Panel2.Controls.Add(this.lvwMostrarProvedores);
             this.splitContainer1.Size = new System.Drawing.Size(897, 536);
             this.splitContainer1.SplitterDistance = 299;
             this.splitContainer1.TabIndex = 0;
@@ -77,34 +77,17 @@
             this.tvwMostrarProveedores.Name = "tvwMostrarProveedores";
             this.tvwMostrarProveedores.Size = new System.Drawing.Size(299, 536);
             this.tvwMostrarProveedores.TabIndex = 2;
+            this.tvwMostrarProveedores.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvwMostrarProveedores_NodeMouseClick);
             // 
-            // lvwMostrarProveedores
+            // button1
             // 
-            this.lvwMostrarProveedores.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clmhName,
-            this.clmhTipo,
-            this.clmhUlt});
-            this.lvwMostrarProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lvwMostrarProveedores.HideSelection = false;
-            this.lvwMostrarProveedores.Location = new System.Drawing.Point(0, 0);
-            this.lvwMostrarProveedores.Name = "lvwMostrarProveedores";
-            this.lvwMostrarProveedores.Size = new System.Drawing.Size(594, 242);
-            this.lvwMostrarProveedores.TabIndex = 2;
-            this.lvwMostrarProveedores.UseCompatibleStateImageBehavior = false;
-            this.lvwMostrarProveedores.View = System.Windows.Forms.View.Details;
-            // 
-            // clmhName
-            // 
-            this.clmhName.Text = "Nombre";
-            // 
-            // clmhTipo
-            // 
-            this.clmhTipo.Text = "Tipo";
-            // 
-            // clmhUlt
-            // 
-            this.clmhUlt.Text = "Ult. Modificacion";
-            this.clmhUlt.Width = 98;
+            this.button1.Location = new System.Drawing.Point(562, 512);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(29, 21);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvMostrarProveedores
             // 
@@ -123,6 +106,9 @@
             this.dgvMostrarProveedores.Name = "dgvMostrarProveedores";
             this.dgvMostrarProveedores.Size = new System.Drawing.Size(594, 288);
             this.dgvMostrarProveedores.TabIndex = 3;
+            this.dgvMostrarProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrarProveedores_CellClick);
+            this.dgvMostrarProveedores.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrarProveedores_CellContentDoubleClick);
+            this.dgvMostrarProveedores.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMostrarProveedores_CellMouseDoubleClick);
             // 
             // ColumnNum
             // 
@@ -164,15 +150,34 @@
             this.ColumnLiqRes.HeaderText = "Liq Responsable";
             this.ColumnLiqRes.Name = "ColumnLiqRes";
             // 
-            // button1
+            // lvwMostrarProvedores
             // 
-            this.button1.Location = new System.Drawing.Point(562, 512);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(29, 21);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lvwMostrarProvedores.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmhName,
+            this.clmhTipo,
+            this.clmhUlt});
+            this.lvwMostrarProvedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lvwMostrarProvedores.HideSelection = false;
+            this.lvwMostrarProvedores.Location = new System.Drawing.Point(0, 0);
+            this.lvwMostrarProvedores.Name = "lvwMostrarProvedores";
+            this.lvwMostrarProvedores.Size = new System.Drawing.Size(594, 242);
+            this.lvwMostrarProvedores.TabIndex = 2;
+            this.lvwMostrarProvedores.UseCompatibleStateImageBehavior = false;
+            this.lvwMostrarProvedores.View = System.Windows.Forms.View.Details;
+            this.lvwMostrarProvedores.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvwMostrarProveedores_MouseDoubleClick);
+            // 
+            // clmhName
+            // 
+            this.clmhName.Text = "Nombre";
+            // 
+            // clmhTipo
+            // 
+            this.clmhTipo.Text = "Tipo";
+            // 
+            // clmhUlt
+            // 
+            this.clmhUlt.Text = "Ult. Modificacion";
+            this.clmhUlt.Width = 98;
             // 
             // frmMostrarProvedores
             // 
@@ -201,7 +206,7 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         public System.Windows.Forms.TreeView tvwMostrarProveedores;
-        public System.Windows.Forms.ListView lvwMostrarProveedores;
+        public System.Windows.Forms.ListView lvwMostrarProvedores;
         private System.Windows.Forms.ColumnHeader clmhName;
         private System.Windows.Forms.ColumnHeader clmhTipo;
         private System.Windows.Forms.ColumnHeader clmhUlt;
