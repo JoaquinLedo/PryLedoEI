@@ -28,19 +28,21 @@ namespace pryLedoEI
         {
 
         }
-
-        private void BtnMostrar_Click(object sender, EventArgs e)
-        {
-
-            frmMostrarProvedores frmMostrarProvedores = new frmMostrarProvedores();
-            frmMostrarProvedores.Show();
-            this.Hide();
-            frmMostrarProvedores.TopMost = true;
-    
-
-        }
+        
         public static string rutaArchivo = "../../Resources/Carpetas de Proveedores/Datos Proveedores/ListadoAseguradores.csv";
-        public void btnModificar_Click(object sender, EventArgs e)
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtModificarEntidad.Clear();
+            txtModificarApertura.Clear();
+            txtModificarExpediente.Clear();
+            txtModificarJuzgado.Clear();
+            txtModificarJurisdiccion.Clear();
+            txtModificarDireccion.Clear();
+            txtModificarLiquidador.Clear();
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
         {
             string posicion = frmMostrarProvedores.pos.ToString();
             List<string> lista = new List<string>();
@@ -75,44 +77,20 @@ namespace pryLedoEI
             this.Hide();
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void btnBorrarProveedor_Click_1(object sender, EventArgs e)
         {
-            txtModificarEntidad.Clear();
-            txtModificarApertura.Clear();
-            txtModificarExpediente.Clear();
-            txtModificarJuzgado.Clear();
-            txtModificarJurisdiccion.Clear();
-            txtModificarDireccion.Clear();
-            txtModificarLiquidador.Clear();
-        }
-
-        private void btnBorrarProveedor_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro de que desea borrar este proveedor?", "Borrar Proveedor", MessageBoxButtons.YesNo);
-
-            if (respuesta == DialogResult.Yes)
+            string posicion = frmMostrarProvedores.pos.ToString();
+            List<string> lista = new List<string>();
+            using (StreamReader leer = new StreamReader(rutaArchivo))
             {
-                string posicion = frmMostrarProvedores.pos.ToString();
-                List<string> lista = new List<string>();
-                using (StreamReader leer = new StreamReader(rutaArchivo))
+                string linea;
+                while ((linea = leer.ReadLine()) != null)
                 {
-                    string linea;
-                    while ((linea = leer.ReadLine()) != null)
-                    {
-                        string[] parametros = linea.Split(';');
+                    string[] parametros = linea.Split(';');
 
-                        if (parametros[0] != frmMostrarProvedores.pos.ToString())
-                        {
-                            lista.Add(linea);
-                        }
-                    }
-                }
-
-                using (StreamWriter escribir = new StreamWriter(rutaArchivo))
-                {
-                    foreach (string linea in lista)
+                    if (parametros[0] != frmMostrarProvedores.pos.ToString())
                     {
-                        escribir.WriteLine(linea);
+                        lista.Add(linea);
                     }
                 }
                 MessageBox.Show("Proveedor Borrado con exito");
@@ -120,10 +98,13 @@ namespace pryLedoEI
                 frmInicio.contCargar = 0;
                 this.Hide();
             }
+        }
 
-
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
 }
+
 

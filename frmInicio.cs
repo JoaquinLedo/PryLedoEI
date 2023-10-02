@@ -49,11 +49,11 @@ namespace pryLedoEI
         {
             if(contProv == 0)
             {
-                frmProvedores.Activate();
-                frmProvedores.Show();
-                frmProvedores.TopMost = true;
+                frmMostrarProvedores.Activate();
+                frmMostrarProvedores.Show();
+                frmMostrarProvedores.TopMost = true;
                 contProv = 1;
-                frmCargarProveedoress.Hide();
+                frmMostrarProvedores.Hide();
                 contCargar = 0;
 
             }
@@ -71,7 +71,7 @@ namespace pryLedoEI
                 frmProvedores.Show();
                 frmProvedores.TopMost = true;
                 contCargar = 1;
-                frmMostrarProveedoress.Hide();
+                frmMostrarProvedores.Hide();
                 contProv = 0;
 
             }

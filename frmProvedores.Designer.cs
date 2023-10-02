@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProvedores));
             this.btnVolver = new System.Windows.Forms.Button();
             this.lblNumero = new System.Windows.Forms.Label();
-            this.BtnMostrar = new System.Windows.Forms.Button();
             this.lblModificarNumProveedor = new System.Windows.Forms.Label();
             this.txtModificarExpediente = new System.Windows.Forms.TextBox();
             this.txtModificarJuzgado = new System.Windows.Forms.TextBox();
@@ -48,6 +47,9 @@
             this.lblEntidad = new System.Windows.Forms.Label();
             this.txtModificarEntidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBorrarProveedor = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -73,19 +75,6 @@
             this.lblNumero.TabIndex = 30;
             this.lblNumero.Text = "N°:";
             this.lblNumero.Visible = false;
-            // 
-            // BtnMostrar
-            // 
-            this.BtnMostrar.BackColor = System.Drawing.Color.LightCyan;
-            this.BtnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMostrar.Location = new System.Drawing.Point(57, 473);
-            this.BtnMostrar.Name = "BtnMostrar";
-            this.BtnMostrar.Size = new System.Drawing.Size(113, 37);
-            this.BtnMostrar.TabIndex = 42;
-            this.BtnMostrar.Text = "Mostrar";
-            this.BtnMostrar.UseVisualStyleBackColor = false;
-            this.BtnMostrar.Click += new System.EventHandler(this.BtnMostrar_Click);
             // 
             // lblModificarNumProveedor
             // 
@@ -142,7 +131,7 @@
             // 
             this.lblLiquidador.AutoSize = true;
             this.lblLiquidador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLiquidador.ForeColor = System.Drawing.Color.Black;
+            this.lblLiquidador.ForeColor = System.Drawing.SystemColors.Window;
             this.lblLiquidador.Location = new System.Drawing.Point(68, 371);
             this.lblLiquidador.Name = "lblLiquidador";
             this.lblLiquidador.Size = new System.Drawing.Size(119, 40);
@@ -153,7 +142,7 @@
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.ForeColor = System.Drawing.Color.Black;
+            this.lblDireccion.ForeColor = System.Drawing.SystemColors.Window;
             this.lblDireccion.Location = new System.Drawing.Point(68, 329);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(89, 20);
@@ -164,7 +153,7 @@
             // 
             this.lblJurisd.AutoSize = true;
             this.lblJurisd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJurisd.ForeColor = System.Drawing.Color.Black;
+            this.lblJurisd.ForeColor = System.Drawing.SystemColors.Window;
             this.lblJurisd.Location = new System.Drawing.Point(68, 284);
             this.lblJurisd.Name = "lblJurisd";
             this.lblJurisd.Size = new System.Drawing.Size(108, 20);
@@ -175,7 +164,7 @@
             // 
             this.lblJuzgado.AutoSize = true;
             this.lblJuzgado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJuzgado.ForeColor = System.Drawing.Color.Black;
+            this.lblJuzgado.ForeColor = System.Drawing.SystemColors.Window;
             this.lblJuzgado.Location = new System.Drawing.Point(68, 239);
             this.lblJuzgado.Name = "lblJuzgado";
             this.lblJuzgado.Size = new System.Drawing.Size(82, 20);
@@ -186,7 +175,7 @@
             // 
             this.lblExpediente.AutoSize = true;
             this.lblExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpediente.ForeColor = System.Drawing.Color.Black;
+            this.lblExpediente.ForeColor = System.Drawing.SystemColors.Window;
             this.lblExpediente.Location = new System.Drawing.Point(68, 194);
             this.lblExpediente.Name = "lblExpediente";
             this.lblExpediente.Size = new System.Drawing.Size(128, 20);
@@ -205,7 +194,7 @@
             // 
             this.lblApertura.AutoSize = true;
             this.lblApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApertura.ForeColor = System.Drawing.Color.Black;
+            this.lblApertura.ForeColor = System.Drawing.SystemColors.Window;
             this.lblApertura.Location = new System.Drawing.Point(68, 149);
             this.lblApertura.Name = "lblApertura";
             this.lblApertura.Size = new System.Drawing.Size(84, 20);
@@ -216,7 +205,7 @@
             // 
             this.lblEntidad.AutoSize = true;
             this.lblEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntidad.ForeColor = System.Drawing.Color.Black;
+            this.lblEntidad.ForeColor = System.Drawing.SystemColors.Window;
             this.lblEntidad.Location = new System.Drawing.Point(68, 104);
             this.lblEntidad.Name = "lblEntidad";
             this.lblEntidad.Size = new System.Drawing.Size(76, 20);
@@ -235,12 +224,54 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
             this.label1.Location = new System.Drawing.Point(68, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 20);
             this.label1.TabIndex = 67;
             this.label1.Text = "N°:";
+            // 
+            // btnBorrarProveedor
+            // 
+            this.btnBorrarProveedor.BackColor = System.Drawing.Color.LightCyan;
+            this.btnBorrarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarProveedor.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarProveedor.ForeColor = System.Drawing.Color.Black;
+            this.btnBorrarProveedor.Location = new System.Drawing.Point(354, 459);
+            this.btnBorrarProveedor.Name = "btnBorrarProveedor";
+            this.btnBorrarProveedor.Size = new System.Drawing.Size(113, 28);
+            this.btnBorrarProveedor.TabIndex = 78;
+            this.btnBorrarProveedor.Text = "BORRAR";
+            this.btnBorrarProveedor.UseVisualStyleBackColor = false;
+            this.btnBorrarProveedor.Click += new System.EventHandler(this.btnBorrarProveedor_Click_1);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.LightCyan;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiar.Location = new System.Drawing.Point(203, 459);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(113, 28);
+            this.btnLimpiar.TabIndex = 77;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.LightCyan;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.Black;
+            this.btnModificar.Location = new System.Drawing.Point(63, 459);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(113, 28);
+            this.btnModificar.TabIndex = 76;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // frmProvedores
             // 
@@ -248,6 +279,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(532, 591);
+            this.Controls.Add(this.btnBorrarProveedor);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.lblModificarNumProveedor);
             this.Controls.Add(this.txtModificarExpediente);
             this.Controls.Add(this.txtModificarJuzgado);
@@ -264,7 +298,6 @@
             this.Controls.Add(this.lblEntidad);
             this.Controls.Add(this.txtModificarEntidad);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnMostrar);
             this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.btnVolver);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -282,7 +315,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.Button BtnMostrar;
         private System.Windows.Forms.Button btnVolver;
         public System.Windows.Forms.Label lblModificarNumProveedor;
         public System.Windows.Forms.TextBox txtModificarExpediente;
@@ -300,5 +332,8 @@
         private System.Windows.Forms.Label lblEntidad;
         public System.Windows.Forms.TextBox txtModificarEntidad;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBorrarProveedor;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
