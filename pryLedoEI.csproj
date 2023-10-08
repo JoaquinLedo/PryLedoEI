@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmABM.Designer.cs">
+      <DependentUpon>frmABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrilla.Designer.cs">
+      <DependentUpon>frmGrilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,17 +76,11 @@
     <Compile Include="frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMostrarProvedores.cs">
+    <Compile Include="frmMostrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMostrarProvedores.Designer.cs">
-      <DependentUpon>frmMostrarProvedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmProvedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmProvedores.Designer.cs">
-      <DependentUpon>frmProvedores.cs</DependentUpon>
+    <Compile Include="frmMostrar.Designer.cs">
+      <DependentUpon>frmMostrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,11 +93,8 @@
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMostrarProvedores.resx">
-      <DependentUpon>frmMostrarProvedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmProvedores.resx">
-      <DependentUpon>frmProvedores.cs</DependentUpon>
+    <EmbeddedResource Include="frmMostrar.resx">
+      <DependentUpon>frmMostrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

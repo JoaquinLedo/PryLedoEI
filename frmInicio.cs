@@ -16,13 +16,10 @@ namespace pryLedoEI
         {
             InitializeComponent();
         }
-        frmMostrarProvedores frmMostrarProvedores = new frmMostrarProvedores();
-        frmProvedores frmCargarProvedores = new frmProvedores();
-        public static int contProv = 0;
-        public static int contCargar = 0;
+      
         private void frmInicio_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
         }
 
         private void frmInicio_Load(object sender, EventArgs e)
@@ -45,40 +42,18 @@ namespace pryLedoEI
             
         }
 
-        private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void btnSalir1_Click(object sender, EventArgs e)
         {
-            if(contProv == 0)
-            {
-                frmMostrarProvedores.Activate();
-                frmMostrarProvedores.Show();
-                frmMostrarProvedores.TopMost = true;
-                contProv = 1;
-                frmMostrarProvedores.Hide();
-                contCargar = 0;
-
-            }
-            else
-            {
-
-                contProv = 0;
-            }
+            this.Hide();
+            frmInicioSesion frminiciar = new frmInicioSesion();
+            frminiciar.Show();
         }
 
-        private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mostrarProvedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (contCargar == 0)
-            {
-                frmProvedores.Show();
-                frmProvedores.TopMost = true;
-                contCargar = 1;
-                frmMostrarProvedores.Hide();
-                contProv = 0;
-
-            }
-            else
-            {
-                contCargar = 0;
-            }
+            frmMostrar mostrar = new frmMostrar();
+            mostrar.Show();
         }
     }
 }
