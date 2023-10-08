@@ -63,6 +63,8 @@
             this.trvMostrar.Name = "trvMostrar";
             this.trvMostrar.Size = new System.Drawing.Size(267, 450);
             this.trvMostrar.TabIndex = 1;
+            this.trvMostrar.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvMostrar_NodeMouseClicktrvMostrar_NodeMouseClick);
+            this.trvMostrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.trvMostrar_MouseClick);
             // 
             // listMostrar
             // 
@@ -77,6 +79,7 @@
             this.listMostrar.TabIndex = 2;
             this.listMostrar.UseCompatibleStateImageBehavior = false;
             this.listMostrar.View = System.Windows.Forms.View.Details;
+            this.listMostrar.DoubleClick += new System.EventHandler(this.listMostrar_DoubleClick);
             // 
             // columnHeader1
             // 
