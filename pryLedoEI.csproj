@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsArchivo.cs" />
+    <Compile Include="clsUsuarios.cs" />
     <Compile Include="frmCargarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>

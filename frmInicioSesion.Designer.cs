@@ -65,6 +65,7 @@
             this.btnNuevoUsuario.TabIndex = 15;
             this.btnNuevoUsuario.Text = "Nuevo Usuario";
             this.btnNuevoUsuario.UseVisualStyleBackColor = false;
+            this.btnNuevoUsuario.Click += new System.EventHandler(this.btnNuevoUsuario_Click);
             // 
             // btnIngresar
             // 

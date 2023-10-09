@@ -43,5 +43,10 @@ namespace pryLedoEI
         {
             Application.Exit();
         }
+
+        private void btnNuevoUsuario_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }
