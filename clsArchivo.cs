@@ -11,9 +11,9 @@ namespace pryLedoEI
     {
         public void Grabar(string datosConcatenados)
         {
-            StreamWriter AdeD = new StreamWriter("../../Resources/Carpetas de Proveedores/Datos Proveedores/ListadoAseguradores.csv", true); //Abrir AdeD
-            AdeD.WriteLine(datosConcatenados); //Leer AdeD
-            AdeD.Close(); //Cerrar AdeD
+            StreamWriter AdeD = new StreamWriter("../../Resources/Carpetas de Proveedores/Datos Proveedores/ListadoAseguradores.csv", true); 
+            AdeD.WriteLine(datosConcatenados); 
+            AdeD.Close();
         }
     }
 }

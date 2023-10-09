@@ -104,12 +104,11 @@ namespace pryLedoEI
         }
         public void lvwMostrarProveedores_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //verifica si la grilla ya está creada. Si no lo está, el código procede a crearla
+           
             if (!grillaCreada)
             {
-                // Leemos el archivo de texto y creamos la grilla
+                
                 StreamReader sr = new StreamReader("../../Resources/Carpetas de Proveedores/Datos Proveedores/ListadoAseguradores.csv");
-                //El código luego lee la primera línea del archivo de texto. Esta línea contiene los encabezados de las columnas de la grilla.
                 string leerLinea;
                 string[] separarDatos;
 
@@ -175,7 +174,6 @@ namespace pryLedoEI
 
         private void btnActualizar_Click_1(object sender, EventArgs e)
         {
-            // Actualizamos los datos de la grilla
             dgvMostrarProveedores.Rows.Clear();
             dgvMostrarProveedores.Columns.Clear();
 
