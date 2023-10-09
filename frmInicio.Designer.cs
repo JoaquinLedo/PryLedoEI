@@ -50,6 +50,8 @@
             this.acercadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pROVEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarProvedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarProvedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cortarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +62,6 @@
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vistapreviadeimpresiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir1 = new System.Windows.Forms.Button();
-            this.mostrarProvedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -175,25 +176,40 @@
             this.pROVEDORESToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(898, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(805, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // pROVEDORESToolStripMenuItem
             // 
             this.pROVEDORESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mostrarProvedoresToolStripMenuItem});
+            this.mostrarProvedoresToolStripMenuItem,
+            this.cargarProvedoresToolStripMenuItem});
             this.pROVEDORESToolStripMenuItem.Name = "pROVEDORESToolStripMenuItem";
             this.pROVEDORESToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.pROVEDORESToolStripMenuItem.Text = "Provedores";
             this.pROVEDORESToolStripMenuItem.Click += new System.EventHandler(this.pROVEDORESToolStripMenuItem_Click);
             // 
+            // mostrarProvedoresToolStripMenuItem
+            // 
+            this.mostrarProvedoresToolStripMenuItem.Name = "mostrarProvedoresToolStripMenuItem";
+            this.mostrarProvedoresToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.mostrarProvedoresToolStripMenuItem.Text = "Mostrar Provedores";
+            this.mostrarProvedoresToolStripMenuItem.Click += new System.EventHandler(this.mostrarProvedoresToolStripMenuItem_Click);
+            // 
+            // cargarProvedoresToolStripMenuItem
+            // 
+            this.cargarProvedoresToolStripMenuItem.Name = "cargarProvedoresToolStripMenuItem";
+            this.cargarProvedoresToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.cargarProvedoresToolStripMenuItem.Text = "Cargar Provedores";
+            this.cargarProvedoresToolStripMenuItem.Click += new System.EventHandler(this.cargarProvedoresToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pryLedoEI.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 41);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 304);
+            this.pictureBox1.Size = new System.Drawing.Size(243, 333);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -271,24 +287,18 @@
             // 
             // btnSalir1
             // 
-            this.btnSalir1.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnSalir1.BackColor = System.Drawing.Color.Red;
             this.btnSalir1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnSalir1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir1.Location = new System.Drawing.Point(42, 347);
+            this.btnSalir1.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir1.Location = new System.Drawing.Point(12, 380);
             this.btnSalir1.Name = "btnSalir1";
-            this.btnSalir1.Size = new System.Drawing.Size(106, 39);
+            this.btnSalir1.Size = new System.Drawing.Size(243, 27);
             this.btnSalir1.TabIndex = 4;
-            this.btnSalir1.Text = "Salir";
+            this.btnSalir1.Text = "Cerrar Sesion";
             this.btnSalir1.UseVisualStyleBackColor = false;
             this.btnSalir1.Click += new System.EventHandler(this.btnSalir1_Click);
-            // 
-            // mostrarProvedoresToolStripMenuItem
-            // 
-            this.mostrarProvedoresToolStripMenuItem.Name = "mostrarProvedoresToolStripMenuItem";
-            this.mostrarProvedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mostrarProvedoresToolStripMenuItem.Text = "Mostrar Provedores";
-            this.mostrarProvedoresToolStripMenuItem.Click += new System.EventHandler(this.mostrarProvedoresToolStripMenuItem_Click);
             // 
             // frmInicio
             // 
@@ -296,7 +306,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(898, 749);
+            this.ClientSize = new System.Drawing.Size(805, 473);
             this.Controls.Add(this.btnSalir1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
@@ -349,5 +359,6 @@
         private System.Windows.Forms.ToolStripMenuItem pROVEDORESToolStripMenuItem;
         private System.Windows.Forms.Button btnSalir1;
         private System.Windows.Forms.ToolStripMenuItem mostrarProvedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cargarProvedoresToolStripMenuItem;
     }
 }

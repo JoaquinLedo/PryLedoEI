@@ -46,17 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmABM.cs">
+    <Compile Include="clsArchivo.cs" />
+    <Compile Include="frmCargarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmABM.Designer.cs">
-      <DependentUpon>frmABM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGrilla.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGrilla.Designer.cs">
-      <DependentUpon>frmGrilla.cs</DependentUpon>
+    <Compile Include="frmCargarProveedores.Designer.cs">
+      <DependentUpon>frmCargarProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInicioSesion.cs">
       <SubType>Form</SubType>
@@ -76,14 +71,23 @@
     <Compile Include="frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMostrar.cs">
+    <Compile Include="frmModificarProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMostrar.Designer.cs">
-      <DependentUpon>frmMostrar.cs</DependentUpon>
+    <Compile Include="frmModificarProveedor.Designer.cs">
+      <DependentUpon>frmModificarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMostrarProveedores .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMostrarProveedores .Designer.cs">
+      <DependentUpon>frmMostrarProveedores .cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCargarProveedores.resx">
+      <DependentUpon>frmCargarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,8 +97,11 @@
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMostrar.resx">
-      <DependentUpon>frmMostrar.cs</DependentUpon>
+    <EmbeddedResource Include="frmModificarProveedor.resx">
+      <DependentUpon>frmModificarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMostrarProveedores .resx">
+      <DependentUpon>frmMostrarProveedores .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +131,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %285%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

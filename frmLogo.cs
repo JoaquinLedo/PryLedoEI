@@ -19,7 +19,7 @@ namespace pryLedoEI
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBar1.Increment(5);
+            progressBar1.Increment(10);
             LblPorcentaje.Text = progressBar1.Value.ToString() + "%";
 
             if (progressBar1.Value == progressBar1.Maximum)
