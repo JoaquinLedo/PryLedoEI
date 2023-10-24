@@ -47,7 +47,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(458, 271);
+            this.label1.Location = new System.Drawing.Point(447, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 13);
             this.label1.TabIndex = 16;
@@ -59,7 +59,7 @@
             this.btnNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNuevoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoUsuario.ForeColor = System.Drawing.Color.Black;
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(410, 221);
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(398, 207);
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
             this.btnNuevoUsuario.Size = new System.Drawing.Size(228, 36);
             this.btnNuevoUsuario.TabIndex = 15;
@@ -73,9 +73,9 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.Black;
-            this.btnIngresar.Location = new System.Drawing.Point(268, 154);
+            this.btnIngresar.Location = new System.Drawing.Point(287, 148);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(500, 40);
+            this.btnIngresar.Size = new System.Drawing.Size(458, 40);
             this.btnIngresar.TabIndex = 14;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -87,7 +87,7 @@
             this.txtContraseña.Location = new System.Drawing.Point(461, 98);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(262, 26);
+            this.txtContraseña.Size = new System.Drawing.Size(248, 26);
             this.txtContraseña.TabIndex = 13;
             // 
             // lblContraseña
@@ -106,7 +106,7 @@
             this.txtNombreDeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreDeUsuario.Location = new System.Drawing.Point(461, 54);
             this.txtNombreDeUsuario.Name = "txtNombreDeUsuario";
-            this.txtNombreDeUsuario.Size = new System.Drawing.Size(262, 26);
+            this.txtNombreDeUsuario.Size = new System.Drawing.Size(248, 26);
             this.txtNombreDeUsuario.TabIndex = 11;
             // 
             // lblNombreUsuario

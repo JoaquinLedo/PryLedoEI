@@ -46,7 +46,9 @@ namespace pryLedoEI
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
         {
-          
+            frmCrearUsuario frmCrearUsuario = new frmCrearUsuario();
+            frmCrearUsuario.Show();
+            this.Hide();
         }
     }
 }
