@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace pryLedoEI
+namespace pryLedoEI.Resources
 {
-    public partial class frmCrearUsuario : Form
+    public partial class frmRestablecerUsuario : Form
     {
-        public frmCrearUsuario()
+        public frmRestablecerUsuario()
         {
             InitializeComponent();
         }
 
-        private void frmCrearUsuario_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        private void frmRestablecerUsuario_Load(object sender, EventArgs e)
         {
 
         }
@@ -37,11 +32,6 @@ namespace pryLedoEI
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

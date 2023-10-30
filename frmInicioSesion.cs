@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using pryLedoEI.Resources;
 
 namespace pryLedoEI
 {
@@ -48,6 +48,13 @@ namespace pryLedoEI
         {
             frmCrearUsuario frmCrearUsuario = new frmCrearUsuario();
             frmCrearUsuario.Show();
+            this.Hide();
+        }
+
+        private void BtnRestablecer_Click(object sender, EventArgs e)
+        {
+           frmRestablecerUsuario restablecerUsuario = new frmRestablecerUsuario();
+            restablecerUsuario.Show();
             this.Hide();
         }
     }

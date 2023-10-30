@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
-            this.label1 = new System.Windows.Forms.Label();
             this.btnNuevoUsuario = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
@@ -39,27 +38,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.BtnRestablecer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(447, 258);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Crear Usuario y Contraseña";
             // 
             // btnNuevoUsuario
             // 
             this.btnNuevoUsuario.BackColor = System.Drawing.Color.White;
             this.btnNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoUsuario.ForeColor = System.Drawing.Color.Black;
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(398, 207);
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(406, 258);
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
             this.btnNuevoUsuario.Size = new System.Drawing.Size(228, 36);
             this.btnNuevoUsuario.TabIndex = 15;
@@ -71,9 +61,9 @@
             // 
             this.btnIngresar.BackColor = System.Drawing.SystemColors.Window;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.Black;
-            this.btnIngresar.Location = new System.Drawing.Point(287, 148);
+            this.btnIngresar.Location = new System.Drawing.Point(286, 166);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(458, 40);
             this.btnIngresar.TabIndex = 14;
@@ -84,7 +74,7 @@
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(461, 98);
+            this.txtContraseña.Location = new System.Drawing.Point(461, 111);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(248, 26);
@@ -95,7 +85,7 @@
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblContraseña.Location = new System.Drawing.Point(318, 101);
+            this.lblContraseña.Location = new System.Drawing.Point(318, 114);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(123, 20);
             this.lblContraseña.TabIndex = 12;
@@ -104,7 +94,7 @@
             // txtNombreDeUsuario
             // 
             this.txtNombreDeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreDeUsuario.Location = new System.Drawing.Point(461, 54);
+            this.txtNombreDeUsuario.Location = new System.Drawing.Point(461, 62);
             this.txtNombreDeUsuario.Name = "txtNombreDeUsuario";
             this.txtNombreDeUsuario.Size = new System.Drawing.Size(248, 26);
             this.txtNombreDeUsuario.TabIndex = 11;
@@ -114,7 +104,7 @@
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(349, 57);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(349, 65);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(92, 20);
             this.lblNombreUsuario.TabIndex = 10;
@@ -152,15 +142,29 @@
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
+            // BtnRestablecer
+            // 
+            this.BtnRestablecer.BackColor = System.Drawing.SystemColors.Window;
+            this.BtnRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnRestablecer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRestablecer.ForeColor = System.Drawing.Color.Black;
+            this.BtnRestablecer.Location = new System.Drawing.Point(342, 212);
+            this.BtnRestablecer.Name = "BtnRestablecer";
+            this.BtnRestablecer.Size = new System.Drawing.Size(349, 40);
+            this.BtnRestablecer.TabIndex = 22;
+            this.BtnRestablecer.Text = "Restablecer Contraseña";
+            this.BtnRestablecer.UseVisualStyleBackColor = false;
+            this.BtnRestablecer.Click += new System.EventHandler(this.BtnRestablecer_Click);
+            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.BtnRestablecer);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNuevoUsuario);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtContraseña);
@@ -183,7 +187,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnNuevoUsuario;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.TextBox txtContraseña;
@@ -193,5 +196,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnSalir;
+        private System.Windows.Forms.Button BtnRestablecer;
     }
 }
