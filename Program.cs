@@ -16,7 +16,7 @@ namespace pryLedoEI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCarga());
+            Application.Run(new frmInicioSesion());
         }
     }
 }

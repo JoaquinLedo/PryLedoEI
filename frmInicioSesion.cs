@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using pryLedoEI.Resources;
 
+
 namespace pryLedoEI
 {
     public partial class frmInicioSesion : Form
@@ -21,18 +22,22 @@ namespace pryLedoEI
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (txtNombreDeUsuario.Text == "usuario" && txtContraseña.Text == "clave")
+
+            clsUsuarios objUsuario = new clsUsuarios();
+
+            objUsuario.ValidarUsuario(txtNombreDeUsuario.Text, txtContraseña.Text);
+
+            if (objUsuario.estadoConexion == "Usuario EXISTE")
             {
-                frmInicio frmInicio = new frmInicio();
-                frmInicio.Show();
-                this.Hide();
+                MessageBox.Show("Ingrese al sistema...");
+                objUsuario.RegistroLogInicioSesion();
             }
             else
             {
-                txtNombreDeUsuario.Clear();
-                txtContraseña.Clear();
-                MessageBox.Show("Usuario o Clave incorrecta");
+                MessageBox.Show("No pasaràs...");
+                objUsuario.RegistroLogInicioSesion();
             }
+
         }
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {
