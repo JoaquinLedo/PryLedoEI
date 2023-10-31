@@ -177,7 +177,7 @@
             this.MinimizeBox = false;
             this.Name = "frmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "STRONG";
+            this.Text = "                    ";
             this.Load += new System.EventHandler(this.frmInicioSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

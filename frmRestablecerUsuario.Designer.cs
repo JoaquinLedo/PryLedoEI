@@ -51,7 +51,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 325);
+            this.panel1.Size = new System.Drawing.Size(251, 324);
             this.panel1.TabIndex = 21;
             // 
             // pictureBox1
@@ -162,7 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(792, 325);
+            this.ClientSize = new System.Drawing.Size(797, 324);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnVolver);
             this.Controls.Add(this.textBox3);
@@ -173,6 +173,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.LblUsuario);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRestablecerUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
