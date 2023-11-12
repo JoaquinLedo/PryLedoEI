@@ -52,6 +52,7 @@
             this.pROVEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarProvedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarProvedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.elClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cortarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -173,7 +174,8 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pROVEDORESToolStripMenuItem});
+            this.pROVEDORESToolStripMenuItem,
+            this.elClubToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(805, 24);
@@ -203,6 +205,13 @@
             this.cargarProvedoresToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.cargarProvedoresToolStripMenuItem.Text = "Cargar Provedores";
             this.cargarProvedoresToolStripMenuItem.Click += new System.EventHandler(this.cargarProvedoresToolStripMenuItem_Click);
+            // 
+            // elClubToolStripMenuItem
+            // 
+            this.elClubToolStripMenuItem.Name = "elClubToolStripMenuItem";
+            this.elClubToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.elClubToolStripMenuItem.Text = "El Club";
+            this.elClubToolStripMenuItem.Click += new System.EventHandler(this.elClubToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -360,5 +369,6 @@
         private System.Windows.Forms.Button btnSalir1;
         private System.Windows.Forms.ToolStripMenuItem mostrarProvedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargarProvedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem elClubToolStripMenuItem;
     }
 }

@@ -91,5 +91,11 @@ namespace pryLedoEI
             }
 
         }
+
+        private void elClubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmElClub frmElClub = new frmElClub();
+            frmElClub.Show();
+        }
     }
 }
