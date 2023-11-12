@@ -17,10 +17,11 @@ namespace pryLedoEI
             InitializeComponent();
         }
 
-        public static string usuarioCrearCuenta;
-        public static string contraseñaCrearCuenta;
-        public static string repitaContraseñaCrearCuenta;
-        public static string lasContraseñasSonIguales;
+        public static string Crearusuario;
+        public static string contraseña;
+        public static string repitaContraseña;
+        public static string ContraseñasIguales;
+        public static string CrearPerfilCuenta;
 
         private void frmCrearUsuario_Load(object sender, EventArgs e)
         {
@@ -51,15 +52,15 @@ namespace pryLedoEI
 
         private void BtnCargarContraseña_Click(object sender, EventArgs e)
         {
-            usuarioCrearCuenta = txtNuevoUusario.Text;
-            contraseñaCrearCuenta = txtContraseñaNueva.Text;
-            repitaContraseñaCrearCuenta = txtContraseñaNuevaR.Text;
-
+            Crearusuario = txtNuevoUusario.Text;
+            contraseña = txtContraseñaNueva.Text;
+            repitaContraseña = txtContraseñaNuevaR.Text;
+            CrearPerfilCuenta = txtPerfil.Text;
             clsUsuarios objLogs = new clsUsuarios();
 
-            if (contraseñaCrearCuenta == repitaContraseñaCrearCuenta)
+            if (contraseña == repitaContraseña)
             {
-                lasContraseñasSonIguales = contraseñaCrearCuenta;
+                ContraseñasIguales = contraseña;
 
                 MessageBox.Show("Cuenta creada con éxito", "", MessageBoxButtons.OK, MessageBoxIcon.None);
 

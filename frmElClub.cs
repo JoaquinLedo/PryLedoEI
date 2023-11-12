@@ -69,6 +69,7 @@ namespace pryLedoEI
             id = Convert.ToInt32(txtCambiarEstadoActivo.Text);
 
             clsArchivo objLogin = new clsArchivo();
+            txtCambiarEstadoActivo.Clear();
         }
 
         private void xtBuscarCliente_TextChanged(object sender, EventArgs e)

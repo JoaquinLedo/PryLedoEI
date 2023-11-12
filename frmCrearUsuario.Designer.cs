@@ -40,6 +40,8 @@
             this.LblConfirmarContraseña = new System.Windows.Forms.Label();
             this.txtContraseñaNueva = new System.Windows.Forms.TextBox();
             this.LblUsuario = new System.Windows.Forms.Label();
+            this.txtPerfil = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -62,6 +64,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.WindowText;
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
+            this.splitContainer1.Panel2.Controls.Add(this.txtPerfil);
             this.splitContainer1.Panel2.Controls.Add(this.BtnSalir);
             this.splitContainer1.Panel2.Controls.Add(this.BtnVolver);
             this.splitContainer1.Panel2.Controls.Add(this.txtContraseñaNuevaR);
@@ -104,7 +108,7 @@
             this.BtnVolver.BackColor = System.Drawing.SystemColors.Window;
             this.BtnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnVolver.Location = new System.Drawing.Point(187, 233);
+            this.BtnVolver.Location = new System.Drawing.Point(189, 258);
             this.BtnVolver.Name = "BtnVolver";
             this.BtnVolver.Size = new System.Drawing.Size(167, 38);
             this.BtnVolver.TabIndex = 28;
@@ -115,7 +119,7 @@
             // txtContraseñaNuevaR
             // 
             this.txtContraseñaNuevaR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaNuevaR.Location = new System.Drawing.Point(245, 135);
+            this.txtContraseñaNuevaR.Location = new System.Drawing.Point(245, 129);
             this.txtContraseñaNuevaR.Name = "txtContraseñaNuevaR";
             this.txtContraseñaNuevaR.Size = new System.Drawing.Size(210, 26);
             this.txtContraseñaNuevaR.TabIndex = 27;
@@ -132,7 +136,7 @@
             // 
             this.BtnCargarContraseña.BackColor = System.Drawing.SystemColors.Window;
             this.BtnCargarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCargarContraseña.Location = new System.Drawing.Point(37, 189);
+            this.BtnCargarContraseña.Location = new System.Drawing.Point(35, 214);
             this.BtnCargarContraseña.Name = "BtnCargarContraseña";
             this.BtnCargarContraseña.Size = new System.Drawing.Size(474, 38);
             this.BtnCargarContraseña.TabIndex = 21;
@@ -156,7 +160,7 @@
             this.LblConfirmarContraseña.AutoSize = true;
             this.LblConfirmarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblConfirmarContraseña.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblConfirmarContraseña.Location = new System.Drawing.Point(79, 138);
+            this.LblConfirmarContraseña.Location = new System.Drawing.Point(79, 132);
             this.LblConfirmarContraseña.Name = "LblConfirmarContraseña";
             this.LblConfirmarContraseña.Size = new System.Drawing.Size(160, 20);
             this.LblConfirmarContraseña.TabIndex = 26;
@@ -180,6 +184,25 @@
             this.LblUsuario.Size = new System.Drawing.Size(150, 20);
             this.LblUsuario.TabIndex = 22;
             this.LblUsuario.Text = "Nombre de Usuario:";
+            // 
+            // txtPerfil
+            // 
+            this.txtPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPerfil.Location = new System.Drawing.Point(245, 161);
+            this.txtPerfil.Name = "txtPerfil";
+            this.txtPerfil.Size = new System.Drawing.Size(210, 26);
+            this.txtPerfil.TabIndex = 30;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(185, 164);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Perfil:";
             // 
             // frmCrearUsuario
             // 
@@ -217,5 +240,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnVolver;
         private System.Windows.Forms.Button BtnSalir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPerfil;
     }
 }
