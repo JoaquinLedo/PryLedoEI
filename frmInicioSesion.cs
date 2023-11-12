@@ -53,7 +53,7 @@ namespace pryLedoEI
                 {
                     MessageBox.Show("Le queda un solo intento", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                //Si intenta ingresar 3 veces y no es correcta la cuenta se bloquea el botón de ingreso
+
                 if (contador > 2)
                 {
                     btnIngresar.Enabled = false;

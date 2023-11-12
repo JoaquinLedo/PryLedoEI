@@ -45,7 +45,7 @@ namespace pryLedoEI
             {
                 estadoDeConexion = error.Message;
             }
-            // Constructor para inicializar la conexión y el comando.
+
             conexionBD = new OleDbConnection();
             comandoBD = new OleDbCommand();
         }
