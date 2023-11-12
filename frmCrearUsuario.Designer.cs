@@ -33,12 +33,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnVolver = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtContraseñaNuevaR = new System.Windows.Forms.TextBox();
+            this.txtNuevoUusario = new System.Windows.Forms.TextBox();
             this.BtnCargarContraseña = new System.Windows.Forms.Button();
             this.LblContraseña = new System.Windows.Forms.Label();
             this.LblConfirmarContraseña = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtContraseñaNueva = new System.Windows.Forms.TextBox();
             this.LblUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -64,12 +64,12 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.WindowText;
             this.splitContainer1.Panel2.Controls.Add(this.BtnSalir);
             this.splitContainer1.Panel2.Controls.Add(this.BtnVolver);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox3);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.txtContraseñaNuevaR);
+            this.splitContainer1.Panel2.Controls.Add(this.txtNuevoUusario);
             this.splitContainer1.Panel2.Controls.Add(this.BtnCargarContraseña);
             this.splitContainer1.Panel2.Controls.Add(this.LblContraseña);
             this.splitContainer1.Panel2.Controls.Add(this.LblConfirmarContraseña);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.txtContraseñaNueva);
             this.splitContainer1.Panel2.Controls.Add(this.LblUsuario);
             this.splitContainer1.Panel2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
@@ -112,21 +112,21 @@
             this.BtnVolver.UseVisualStyleBackColor = false;
             this.BtnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
             // 
-            // textBox3
+            // txtContraseñaNuevaR
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(245, 135);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 26);
-            this.textBox3.TabIndex = 27;
+            this.txtContraseñaNuevaR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaNuevaR.Location = new System.Drawing.Point(245, 135);
+            this.txtContraseñaNuevaR.Name = "txtContraseñaNuevaR";
+            this.txtContraseñaNuevaR.Size = new System.Drawing.Size(210, 26);
+            this.txtContraseñaNuevaR.TabIndex = 27;
             // 
-            // textBox1
+            // txtNuevoUusario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(245, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 26);
-            this.textBox1.TabIndex = 24;
+            this.txtNuevoUusario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuevoUusario.Location = new System.Drawing.Point(245, 62);
+            this.txtNuevoUusario.Name = "txtNuevoUusario";
+            this.txtNuevoUusario.Size = new System.Drawing.Size(210, 26);
+            this.txtNuevoUusario.TabIndex = 24;
             // 
             // BtnCargarContraseña
             // 
@@ -138,6 +138,7 @@
             this.BtnCargarContraseña.TabIndex = 21;
             this.BtnCargarContraseña.Text = "Crear Usuario y Contraseña";
             this.BtnCargarContraseña.UseVisualStyleBackColor = false;
+            this.BtnCargarContraseña.Click += new System.EventHandler(this.BtnCargarContraseña_Click);
             // 
             // LblContraseña
             // 
@@ -161,13 +162,13 @@
             this.LblConfirmarContraseña.TabIndex = 26;
             this.LblConfirmarContraseña.Text = "Confirmar Cotraseña:";
             // 
-            // textBox2
+            // txtContraseñaNueva
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(245, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 26);
-            this.textBox2.TabIndex = 25;
+            this.txtContraseñaNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaNueva.Location = new System.Drawing.Point(245, 97);
+            this.txtContraseñaNueva.Name = "txtContraseñaNueva";
+            this.txtContraseñaNueva.Size = new System.Drawing.Size(210, 26);
+            this.txtContraseñaNueva.TabIndex = 25;
             // 
             // LblUsuario
             // 
@@ -206,12 +207,12 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtContraseñaNuevaR;
+        private System.Windows.Forms.TextBox txtNuevoUusario;
         private System.Windows.Forms.Button BtnCargarContraseña;
         private System.Windows.Forms.Label LblContraseña;
         private System.Windows.Forms.Label LblConfirmarContraseña;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtContraseñaNueva;
         private System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnVolver;

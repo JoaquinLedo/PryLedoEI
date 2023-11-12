@@ -20,24 +20,47 @@ namespace pryLedoEI
             InitializeComponent();
         }
 
+        public static string usuario;
+        public static string contraseña;
+        int contador = 0;
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            usuario = txtNombreDeUsuario.Text;
+            contraseña = txtContraseña.Text;
 
-            clsUsuarios objUsuario = new clsUsuarios();
+            clsUsuarios Usuarios = new clsUsuarios();
+            Usuarios.BuscarUsuario();
+            clsUsuarios objLogs = new clsUsuarios();
 
-            objUsuario.ValidarUsuario(txtNombreDeUsuario.Text, txtContraseña.Text);
-
-            if (objUsuario.estadoConexion == "Usuario EXISTE")
+            if (clsUsuarios.acceso == true)
             {
-                MessageBox.Show("Ingrese al sistema...");
-                objUsuario.RegistroLogInicioSesion();
+                objLogs.RegistroLogInicioSesionExitoso();
+
+
+                this.Hide();
+                frmInicio frmInicio = new frmInicio();
+                frmInicio.Show();
             }
             else
             {
-                MessageBox.Show("No pasaràs...");
-                objUsuario.RegistroLogInicioSesion();
-            }
+                objLogs.RegistroLogInicioSesionFallido();
 
+                contador = contador + 1;
+                MessageBox.Show("Usuario o contraeña incorrecto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (contador == 2)
+                {
+                    MessageBox.Show("Le queda un solo intento", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                //Si intenta ingresar 3 veces y no es correcta la cuenta se bloquea el botón de ingreso
+                if (contador > 2)
+                {
+                    btnIngresar.Enabled = false;
+                    MessageBox.Show("Ingreso bloqueado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    contador = 0;
+                }
+            }
         }
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {
@@ -58,9 +81,19 @@ namespace pryLedoEI
 
         private void BtnRestablecer_Click(object sender, EventArgs e)
         {
-           frmRestablecerUsuario restablecerUsuario = new frmRestablecerUsuario();
+            frmRestablecerUsuario restablecerUsuario = new frmRestablecerUsuario();
             restablecerUsuario.Show();
             this.Hide();
+        }
+
+        private void frmInicioSesion_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void frmInicioSesion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

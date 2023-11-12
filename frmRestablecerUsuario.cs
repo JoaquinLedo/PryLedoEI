@@ -16,7 +16,10 @@ namespace pryLedoEI.Resources
         {
             InitializeComponent();
         }
-
+        public static string usuarioReestablecerContraseña;
+        public static string contraseñaReestablecerContraseña;
+        public static string repitaContraseñaReestablecerContraseña;
+        public static string contraseñasIguales;
         private void frmRestablecerUsuario_Load(object sender, EventArgs e)
         {
 
@@ -32,6 +35,33 @@ namespace pryLedoEI.Resources
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void BtnRestablecerContraseña_Click(object sender, EventArgs e)
+        {
+            usuarioReestablecerContraseña = txtUsuariosRestablecer.Text;
+            contraseñaReestablecerContraseña = txtNuevaContraseña.Text;
+            repitaContraseñaReestablecerContraseña = txtRContraseña.Text;
+
+            clsUsuarios objLogs = new clsUsuarios();
+
+            if (contraseñaReestablecerContraseña == repitaContraseñaReestablecerContraseña)
+            {
+                contraseñasIguales = contraseñaReestablecerContraseña;
+
+                MessageBox.Show("Contraseña reestablecida con éxito", "", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                clsUsuarios objLogin = new clsUsuarios();
+
+                objLogin.ReestablecerContraseña(usuarioReestablecerContraseña);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas ingresadas no son iguales.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

@@ -32,12 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnVolver = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRContraseña = new System.Windows.Forms.TextBox();
+            this.txtUsuariosRestablecer = new System.Windows.Forms.TextBox();
             this.BtnRestablecerContraseña = new System.Windows.Forms.Button();
             this.LblContraseña = new System.Windows.Forms.Label();
             this.LblConfirmarContraseña = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNuevaContraseña = new System.Windows.Forms.TextBox();
             this.LblUsuario = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -77,21 +77,21 @@
             this.BtnVolver.UseVisualStyleBackColor = false;
             this.BtnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
             // 
-            // textBox3
+            // txtRContraseña
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(489, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 26);
-            this.textBox3.TabIndex = 35;
+            this.txtRContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRContraseña.Location = new System.Drawing.Point(489, 130);
+            this.txtRContraseña.Name = "txtRContraseña";
+            this.txtRContraseña.Size = new System.Drawing.Size(210, 26);
+            this.txtRContraseña.TabIndex = 35;
             // 
-            // textBox1
+            // txtUsuariosRestablecer
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(489, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 26);
-            this.textBox1.TabIndex = 32;
+            this.txtUsuariosRestablecer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuariosRestablecer.Location = new System.Drawing.Point(489, 57);
+            this.txtUsuariosRestablecer.Name = "txtUsuariosRestablecer";
+            this.txtUsuariosRestablecer.Size = new System.Drawing.Size(210, 26);
+            this.txtUsuariosRestablecer.TabIndex = 32;
             // 
             // BtnRestablecerContraseña
             // 
@@ -103,6 +103,7 @@
             this.BtnRestablecerContraseña.TabIndex = 29;
             this.BtnRestablecerContraseña.Text = "Restablecer  Contraseña";
             this.BtnRestablecerContraseña.UseVisualStyleBackColor = false;
+            this.BtnRestablecerContraseña.Click += new System.EventHandler(this.BtnRestablecerContraseña_Click);
             // 
             // LblContraseña
             // 
@@ -126,13 +127,13 @@
             this.LblConfirmarContraseña.TabIndex = 34;
             this.LblConfirmarContraseña.Text = "Confirmar Cotraseña:";
             // 
-            // textBox2
+            // txtNuevaContraseña
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(489, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 26);
-            this.textBox2.TabIndex = 33;
+            this.txtNuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuevaContraseña.Location = new System.Drawing.Point(489, 92);
+            this.txtNuevaContraseña.Name = "txtNuevaContraseña";
+            this.txtNuevaContraseña.Size = new System.Drawing.Size(210, 26);
+            this.txtNuevaContraseña.TabIndex = 33;
             // 
             // LblUsuario
             // 
@@ -165,12 +166,12 @@
             this.ClientSize = new System.Drawing.Size(797, 324);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnVolver);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRContraseña);
+            this.Controls.Add(this.txtUsuariosRestablecer);
             this.Controls.Add(this.BtnRestablecerContraseña);
             this.Controls.Add(this.LblContraseña);
             this.Controls.Add(this.LblConfirmarContraseña);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNuevaContraseña);
             this.Controls.Add(this.LblUsuario);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -191,12 +192,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnVolver;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRContraseña;
+        private System.Windows.Forms.TextBox txtUsuariosRestablecer;
         private System.Windows.Forms.Button BtnRestablecerContraseña;
         private System.Windows.Forms.Label LblContraseña;
         private System.Windows.Forms.Label LblConfirmarContraseña;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNuevaContraseña;
         private System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.Button BtnSalir;
     }

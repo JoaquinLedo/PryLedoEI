@@ -179,6 +179,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "                    ";
             this.Load += new System.EventHandler(this.frmInicioSesion_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmInicioSesion_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmInicioSesion_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

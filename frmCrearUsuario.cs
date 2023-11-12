@@ -17,6 +17,11 @@ namespace pryLedoEI
             InitializeComponent();
         }
 
+        public static string usuarioCrearCuenta;
+        public static string contraseñaCrearCuenta;
+        public static string repitaContraseñaCrearCuenta;
+        public static string lasContraseñasSonIguales;
+
         private void frmCrearUsuario_Load(object sender, EventArgs e)
         {
 
@@ -42,6 +47,32 @@ namespace pryLedoEI
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void BtnCargarContraseña_Click(object sender, EventArgs e)
+        {
+            usuarioCrearCuenta = txtNuevoUusario.Text;
+            contraseñaCrearCuenta = txtContraseñaNueva.Text;
+            repitaContraseñaCrearCuenta = txtContraseñaNuevaR.Text;
+
+            clsUsuarios objLogs = new clsUsuarios();
+
+            if (contraseñaCrearCuenta == repitaContraseñaCrearCuenta)
+            {
+                lasContraseñasSonIguales = contraseñaCrearCuenta;
+
+                MessageBox.Show("Cuenta creada con éxito", "", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                clsUsuarios objLogin = new clsUsuarios();
+
+                objLogin.CrearCuenta();
+
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas ingresadas no son iguales.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }
