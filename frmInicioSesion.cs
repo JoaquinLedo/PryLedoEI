@@ -82,12 +82,53 @@ namespace pryLedoEI
 
         private void frmInicioSesion_KeyDown(object sender, KeyEventArgs e)
         {
-           
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+
         }
 
         private void frmInicioSesion_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                usuario = txtNombreDeUsuario.Text;
+                contraseña = txtContraseña.Text;
+
+                clsUsuarios Usuarios = new clsUsuarios();
+                Usuarios.BuscarUsuario();
+                clsUsuarios objLogs = new clsUsuarios();
+
+                if (clsUsuarios.acceso == true)
+                {
+                    objLogs.RegistroLogInicioSesionExitoso();
+
+
+                    this.Hide();
+                    frmInicio frmInicio = new frmInicio();
+                    frmInicio.Show();
+                }
+                else
+                {
+                    objLogs.RegistroLogInicioSesionFallido();
+                    contador = contador + 1;
+                    MessageBox.Show("Usuario o contraeña incorrecto");
+
+                    if (contador > 2)
+                    {
+                        btnIngresar.Enabled = false;
+                        MessageBox.Show("Ingreso bloqueado");
+                        contador = 0;
+                    }
+                }
+            }
         }
     }
 }
