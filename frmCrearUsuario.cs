@@ -62,7 +62,7 @@ namespace pryLedoEI
             {
                 ContraseñasIguales = contraseña;
 
-                MessageBox.Show("Cuenta creada con éxito", "", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Cuenta creada con éxito");
 
                 clsUsuarios objLogin = new clsUsuarios();
 
@@ -71,7 +71,7 @@ namespace pryLedoEI
             }
             else
             {
-                MessageBox.Show("Las contraseñas ingresadas no son iguales.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Las contraseñas ingresadas no son iguales.");
 
             }
         }

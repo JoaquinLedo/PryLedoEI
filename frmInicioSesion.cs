@@ -45,19 +45,13 @@ namespace pryLedoEI
             else
             {
                 objLogs.RegistroLogInicioSesionFallido();
-
                 contador = contador + 1;
-                MessageBox.Show("Usuario o contraeña incorrecto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                if (contador == 2)
-                {
-                    MessageBox.Show("Le queda un solo intento", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                MessageBox.Show("Usuario o contraeña incorrecto");
 
                 if (contador > 2)
                 {
                     btnIngresar.Enabled = false;
-                    MessageBox.Show("Ingreso bloqueado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ingreso bloqueado");
                     contador = 0;
                 }
             }

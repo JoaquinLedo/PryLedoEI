@@ -38,30 +38,26 @@ namespace pryLedoEI
         }
 
         public clsArchivo()
-        {
-            
-                cadenaConexionElClub = @"Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source = ..\\..\\Resources\\EL_CLUB.accdb";
+        { 
+            cadenaConexionElClub = @"Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source = ..\\..\\Resources\\EL_CLUB.accdb";
+            conexionBD = new OleDbConnection();
+            conexionBD.ConnectionString = cadenaConexionElClub;
+            conexionBD.Open();
 
-                conexionBD = new OleDbConnection();
-                conexionBD.ConnectionString = cadenaConexionElClub;
-                conexionBD.Open();
+            objDS = new DataSet();
 
-                objDS = new DataSet();
-
-                estadoConexion = "Conectado";
+            estadoConexion = "Conectado";
           
             conexionBD = new OleDbConnection();
             comandoBD = new OleDbCommand();
         }
 
         public void ConectarBDElClub()
-        {
-            
+        { 
                 conexionBD = new OleDbConnection();
                 conexionBD.ConnectionString = cadenaConexionElClub;
                 conexionBD.Open();
                 estadoConexion = "Conectado";
-           
         }
 
         public void TraerDatosElClub(DataGridView grilla)
@@ -69,7 +65,6 @@ namespace pryLedoEI
             string estadoCliente = "";
             string sexo = "";
 
-            
                 comandoBD = new OleDbCommand();
 
                 comandoBD.Connection = conexionBD;
@@ -121,34 +116,34 @@ namespace pryLedoEI
         public void BuscarPorCodigoDatosElClub(int codigoSocio)
         {
             
-                comandoBD = new OleDbCommand();
+            comandoBD = new OleDbCommand();
 
-                comandoBD.Connection = conexionBD;
-                comandoBD.CommandType = System.Data.CommandType.TableDirect;
-                comandoBD.CommandText = "SOCIOS";
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = System.Data.CommandType.TableDirect;
+            comandoBD.CommandText = "SOCIOS";
+            lectorBD = comandoBD.ExecuteReader();
 
-                lectorBD = comandoBD.ExecuteReader();
+            bool seEncuentra = false;
 
-                bool seEncuentra = false;
+           if (lectorBD.HasRows)
+           {
+               while (lectorBD.Read())
+               {
+                  if (int.Parse(lectorBD[0].ToString()) == codigoSocio)
+                  {
+                     MessageBox.Show("El cliente es: \n" + lectorBD[1].ToString() + " " + lectorBD[2].ToString(), "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     seEncuentra = true;
+                     break;
+                  }
+               }
 
-                if (lectorBD.HasRows)
+                if (seEncuentra == false)
                 {
-                    while (lectorBD.Read())
-                    {
-                        if (int.Parse(lectorBD[0].ToString()) == codigoSocio)
-                        {
-                            MessageBox.Show("El cliente es: \n" + lectorBD[1].ToString() + " " + lectorBD[2].ToString(), "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            seEncuentra = true;
-                            break;
-                        }
-                    }
-
-                    if (seEncuentra == false)
-                    {
-                        MessageBox.Show("El cliente no existe", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    MessageBox.Show("El cliente no existe");
+            
                 }
-           
+
+           }
         }
 
         public void BuscarPorApellidoDatosElClub(string apellidoSocio)
@@ -178,7 +173,7 @@ namespace pryLedoEI
 
                     if (seEncuentra == false)
                     {
-                        MessageBox.Show("El cliente no existe", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("El cliente no existe");
                     }
                 }
 
@@ -191,18 +186,12 @@ namespace pryLedoEI
             OleDbDataAdapter objAdaptador;
             DataSet objDataSet = new DataSet();
 
-            try
-            {
-                conexionBD = new OleDbConnection();
-                conexionBD.ConnectionString = cadenaConexionElClub;
-                conexionBD.Open();
-                estadoConexion = "Conectado";
+            
+            conexionBD = new OleDbConnection();
+            conexionBD.ConnectionString = cadenaConexionElClub;
+            conexionBD.Open();
+            estadoConexion = "Conectado";
 
-            }
-            catch (Exception ex)
-            {
-                estadoConexion = "Error" + ex.Message;
-            }
 
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = CommandType.TableDirect;

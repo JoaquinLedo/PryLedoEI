@@ -28,9 +28,6 @@ namespace pryLedoEI
         frmInicioSesion frmInicioSesion = new frmInicioSesion();
         public clsUsuarios()
         {
-
-            try
-            {
                 cadenaConexionBase = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
 
                 conexionBD = new OleDbConnection();
@@ -40,12 +37,6 @@ namespace pryLedoEI
                 objDS = new DataSet();
 
                 estadoDeConexion = "Conectado";
-            }
-            catch (Exception error)
-            {
-                estadoDeConexion = error.Message;
-            }
-
             conexionBD = new OleDbConnection();
             comandoBD = new OleDbCommand();
         }
@@ -53,18 +44,10 @@ namespace pryLedoEI
 
         public void ConectarBD()
         {
-            try
-            {
                 string conexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BaseDatosUsuarios.accdb";
 
                 conexionBD.ConnectionString = conexion;
                 conexionBD.Open();
-
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(Convert.ToString(error));
-            }
         }
 
         public void BuscarUsuario()
@@ -135,7 +118,7 @@ namespace pryLedoEI
 
                 adaptadorBD.Update(objDS, "Usuarios");
 
-                estadoConexion = "Cuenta creada con éxito";
+                estadoConexion = "Cuenta creada con exito";
         }
 
         public void ReestablecerContraseña(string usuario)
@@ -144,17 +127,6 @@ namespace pryLedoEI
             OleDbCommand comandoBD = new OleDbCommand();
             OleDbDataAdapter objAdaptador;
             DataSet objDataSet = new DataSet();
-
-            try
-            {
-                ConectarBD();
-                estadoConexion = "Conectado";
-
-            }
-            catch (Exception ex)
-            {
-                estadoConexion = "Error" + ex.Message;
-            }
 
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = CommandType.TableDirect;
@@ -189,50 +161,27 @@ namespace pryLedoEI
 
         public void RegistroLogInicioSesionExitoso()
         {
-            
                 ConectarBD();
 
                 comandoBD = new OleDbCommand();
 
                 comandoBD.Connection = conexionBD;
 
-                //Establezco el tipo de comando, con este comando le indico que voy a trabajar con una tabla específica
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
-
-                //Le digo que tabla quiero traer
                 comandoBD.CommandText = "Logs";
-
-                //Creo el objeto DataAdapter pasando como parámetro el objeto comando que quiero vincular
                 adaptadorBD = new OleDbDataAdapter(comandoBD);
-
-                //Ejecuto la lectura de la tabla y almaceno su contenido en el dataAdapter
                 adaptadorBD.Fill(objDS, "Logs");
-
-                //Obtengo una referencia a la tabla
-
                 DataTable objTabla = objDS.Tables["Logs"];
 
-                //Creo el nuevo DataRow con la estructura de campos de la tabla de la cual quiero traer los datos
                 DataRow nuevoRegistro = objTabla.NewRow();
-
-                //Asigno los valores a todos los campos del DataRow
                 nuevoRegistro["Categoria"] = "Inicio Sesión";
-                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Fecha"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Inicio exitoso";
                 nuevoRegistro["Usuario"] = frmInicioSesion.usuario;
 
-                //Agrego el DataRow a la tabla
                 objTabla.Rows.Add(nuevoRegistro);
-
-
-                //Creo el objeto OledBCommandBuilder pasando como parámetro el DataAdapter
                 OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-
-                //Actualizo la base con los cambios realizados
                 adaptadorBD.Update(objDS, "Logs");
-
-                estadoDeConexion = "Registro exitoso de log";
-            
         }
 
 
@@ -256,7 +205,7 @@ namespace pryLedoEI
                 DataRow nuevoRegistro = objTabla.NewRow();
 
                 nuevoRegistro["Categoria"] = "Inicio Sesión";
-                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Fecha"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Inicio fallido";
                 nuevoRegistro["Usuario"] = frmInicioSesion.usuario;
 
