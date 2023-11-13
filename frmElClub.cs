@@ -57,6 +57,8 @@ namespace pryLedoEI
 
             objLogin.ModificarEstadoSocio(id);
 
+            txtCambiarEstadoActivo.Clear();
+
         }
 
         private void txtBuscarClientePorApellido_TextChanged(object sender, EventArgs e)
@@ -66,10 +68,7 @@ namespace pryLedoEI
 
         private void txtCambiarEstadoActivo_TextChanged(object sender, EventArgs e)
         {
-            id = Convert.ToInt32(txtCambiarEstadoActivo.Text);
-
-            clsArchivo objLogin = new clsArchivo();
-            txtCambiarEstadoActivo.Clear();
+            
         }
 
         private void xtBuscarCliente_TextChanged(object sender, EventArgs e)

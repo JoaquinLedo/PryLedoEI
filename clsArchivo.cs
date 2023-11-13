@@ -28,7 +28,7 @@ namespace pryLedoEI
 
         public string estadoConexion = "";
 
-        public static bool acceso;
+ 
 
         public void Grabar(string datosConcatenados)
         {
